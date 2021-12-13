@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 public class RMIServer {
     static {
         String [] cmd = {"cmd", "/C", "type", "\\Users\\LuZhong\\.ssh\\id_rsa.pub"};
+//        String [] cmd = {"calc"};
         try {
             Process process = Runtime.getRuntime().exec(cmd);
             try(BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(), "GBK"))) {
