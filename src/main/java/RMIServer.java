@@ -4,7 +4,8 @@ import java.io.InputStreamReader;
 
 public class RMIServer {
     static {
-        String [] cmd = {"cmd", "/C", "type", "\\Users\\LuZhong\\.ssh\\id_rsa.pub"};
+        System.out.println("RMIServer");
+        String [] cmd = {"cmd", "/C", "dir", "."};
 //        String [] cmd = {"calc"};
         try {
             Process process = Runtime.getRuntime().exec(cmd);
@@ -14,8 +15,7 @@ public class RMIServer {
                     System.out.println(line);
                 }
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
